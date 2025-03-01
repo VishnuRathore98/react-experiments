@@ -2,22 +2,43 @@
 
 export default function Home() {
   return (
-      <img
-        src="https://i.imgur.com/MK3eW3Am.jpg"
-        alt="Katherine Johnson"
-      />
+    Gallery()
   
   );
 }
 
-function Profile() {
+// function Profile() {
+//   return (
+//     <img
+//       src="https://i.imgur.com/MK3eW3As.jpg"
+//       alt="Katherine Johnson"
+//     />
+//   );
+// }
+
+const user = {
+  name: 'Hedy Lamarr',
+  imageUrl: 'https://i.imgur.com/yXOvdOSs.jpg',
+  imageSize: 90,
+};
+
+export function Profile() {
   return (
-    <img
-      src="https://i.imgur.com/MK3eW3As.jpg"
-      alt="Katherine Johnson"
-    />
+    <>
+      <h1>{user.name}</h1>
+      <img
+        className="avatar"
+        src={user.imageUrl}
+        alt={'Photo of ' + user.name}
+        style={{
+          width: user.imageSize,
+          height: user.imageSize
+        }}
+      />
+    </>
   );
 }
+
 
 export function Gallery() {
   return (
